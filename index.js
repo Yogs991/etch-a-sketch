@@ -5,8 +5,17 @@ const sketchArea = document.querySelector("#sketchArea");
 sketchArea.style.width = `${gridSide}px`;
 sketchArea.style.height = `${gridSide}px`;
 
-function changeBackgroundColor(){
-    this.style.backgroundColor = "black";
+function getRandomColor(){
+    let letters = '0123456789ABCDEF';
+    let color = "#";
+    for (let i=0; i<6; i++){
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function SetRandomColor(){
+    this.style.backgroundColor = getRandomColor();
 }
 
 function createGrid(){
@@ -18,7 +27,7 @@ function createGrid(){
         gridCell.style.height = size;
         gridCell.classList.add("cell");
         sketchArea.appendChild(gridCell);
-        gridCell.addEventListener("mouseover",changeBackgroundColor);
+        gridCell.addEventListener("mouseover",SetRandomColor);
     }
 }
 
