@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: aliceblue;
+    background-color:darkgrey;
 }
 
 #sketchArea{
@@ -16,4 +16,30 @@ body{
 
 .cell{
     border: 1px solid whitesmoke;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#setSizeBtn, #clearBtn{
+    width: 140px;
+    height: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
